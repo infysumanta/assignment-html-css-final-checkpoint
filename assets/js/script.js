@@ -1,22 +1,8 @@
-let menuIcon = document.querySelector(".menuIcon");
-let nav = document.querySelector(".overlay-menu");
-
-menuIcon.addEventListener("click", () => {
-  if (nav.style.transform != "translateX(0%)") {
-    nav.style.transform = "translateX(0%)";
-    nav.style.transition = "transform 0.2s ease-out";
+var mybutton = document.getElementById("myBtn");
+window.onscroll = function () {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
   } else {
-    nav.style.transform = "translateX(-100%)";
-    nav.style.transition = "transform 0.2s ease-out";
+    mybutton.style.display = "none";
   }
-});
-
-let toggleIcon = document.querySelector(".menuIcon");
-
-toggleIcon.addEventListener("click", () => {
-  if (toggleIcon.className != "menuIcon toggle") {
-    toggleIcon.className += " toggle";
-  } else {
-    toggleIcon.className = "menuIcon";
-  }
-});
+};
